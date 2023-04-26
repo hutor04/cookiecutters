@@ -1,0 +1,7 @@
+{
+  "directory_name": "new-project",
+  "project_name": "BaseReactApp",
+  "_copy_without_render": [
+    "mockoonProfile.json"
+  ]
+}
