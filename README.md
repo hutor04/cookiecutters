@@ -4,6 +4,7 @@
 
 - ```pip install cookiecutter ```
 - ```cookiecutter /path-to-cookie-cutter-directory```
+- Or one can create a new project directly from Git ```cookiecutter https://github.com/hutor04/cookiecutters.git --directory="directory1-name"```
 
 ## List of cookiecutters
 
