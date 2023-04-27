@@ -1,8 +1,9 @@
-FROM node:16-alpine AS frontbuilder
+FROM node:18-alpine AS frontbuilder
 WORKDIR /app
 COPY . .
 RUN npm install
-RUN npm run build
+RUN npm rebuild node-sass
+RUN npm run build:dev
 
 FROM busybox:1.35
 
