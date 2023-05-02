@@ -26,13 +26,14 @@ const Person: FunctionComponent = () => {
     dispatch(fetchPersonById(id));
   });
 
-  if (status === RequestStatus.LOADING) return <p>Loading...</p>
-  if (status === RequestStatus.ERROR) return <p>Error: {error.message}</p>
+
 
   return(
     <div className={styles.personContainer}>
-      <p>Hello!!</p>
-      <p>{firstName} {lastName}</p>
+      <h1>Person {personId}</h1>
+      { status === RequestStatus.LOADING && <p>Loading...</p> }
+      { status === RequestStatus.ERROR && <p>Error: {error.message}</p> }
+      { (status === RequestStatus.SUCCESS && firstName && lastName) && <p>{firstName} {lastName}</p> }
     </div>
   );
 }
